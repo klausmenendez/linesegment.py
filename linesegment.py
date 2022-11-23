@@ -17,12 +17,12 @@ class Point:
         self._y_coord=y_coord
         self._point_object=[self._x_coord, self._y_coord]
 
-    def get_x_coordinate(self):
+    def get_x_coord(self):
        return self._x_coord
     '''
     returns x coordinate of point
     '''
-    def get_y_coordinate(self):
+    def get_y_coord(self):
        return self._y_coord
     '''
     returns y coordinate of point
@@ -34,8 +34,8 @@ class Point:
         :param point_object2: 2nd point object
         :return:
         '''
-        x2=point_object2.get_x_coordinate()
-        y2=point_object2.get_y_coordinate()
+        x2=point_object2.get_x_coord()
+        y2=point_object2.get_y_coord()
         x1=self._point_object[1]
         y1=self._point_object[0]
         distance=((y2-y1)**(2)-(x2-x1)**(2))**(0.5)
@@ -75,10 +75,10 @@ class LineSegment:
         Finds slope of line segment between endpoint1 and endpoint2
         :return:
         '''
-        x1=self._endpoint_1.get_x_coordinate()
-        y1=self._endpoint_1.get_y_coordinate()
-        x2=self._endpoint_2.get_x_coordinate()
-        y2=self._endpoint_2.get_y_coordinate()
+        x1=self._endpoint_1.get_x_coord()
+        y1=self._endpoint_1.get_y_coord()
+        x2=self._endpoint_2.get_x_coord()
+        y2=self._endpoint_2.get_y_coord()
         slope = float((y2 - y1) / (x2 - x1))
         print(slope)
 
@@ -90,8 +90,8 @@ class LineSegment:
         '''
         self._pair1=lseg1.get_endpoint_2()
         self._pair2=lseg1.get_endpoint_1()
-        num2=(self._endpoint_2.get_y_coordinate()-self._endpoint_1.get_y_coordinate())/(self._endpoint_2.get_x_coordinate()-self._endpoint_1.get_x_coordinate())
-        if (abs((float(self._pair1.get_y_coordinate()-self._pair2.get_y_coordinate())/(self._pair1.get_x_coordinate()-self._pair2.get_x_coordinate())-num2))<0.000001):
+        num2=(self._endpoint_2.get_y_coord()-self._endpoint_1.get_y_coord())/(self._endpoint_2.get_x_coord()-self._endpoint_1.get_x_coord())
+        if (abs((float(self._pair1.get_y_coord()-self._pair2.get_y_coord())/(self._pair1.get_x_coord()-self._pair2.get_x_coord())-num2))<0.000001):
             print("true")
         else:
             print("false")
