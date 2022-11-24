@@ -92,7 +92,7 @@ class LineSegment:
         self._pair2=lseg1.get_endpoint_1()
         num1=(self._endpoint_2.get_y_coord()-self._endpoint_1.get_y_coord())/(self._endpoint_2.get_x_coord()-self._endpoint_1.get_x_coord())
         num2=(self._pair1.get_y_coord()-self._pair2.get_y_coord())/(self._pair1.get_x_coord()-self._pair2.get_x_coord())
-        if num1==num2:
+        if (abs(num1-num2)<0.00001):
             print("true")
         else:
             print("false")
