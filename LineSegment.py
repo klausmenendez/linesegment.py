@@ -88,10 +88,10 @@ class LineSegment:
         :param lseg1: line segment object passed as parameter
         :return:
         '''
-        self._pair1=lseg1.get_endpoint_2()
-        self._pair2=lseg1.get_endpoint_1()
+        pair1=lseg1.get_endpoint_2()
+        pair2=lseg1.get_endpoint_1()
         num1=(self._endpoint_2.get_y_coord()-self._endpoint_1.get_y_coord())/(self._endpoint_2.get_x_coord()-self._endpoint_1.get_x_coord())
-        num2=(self._pair1.get_y_coord()-self._pair2.get_y_coord())/(self._pair1.get_x_coord()-self._pair2.get_x_coord())
+        num2=(pair1.get_y_coord()-pair2.get_y_coord())/(pair1.get_x_coord()-pair2.get_x_coord())
         if (abs(num1-num2)<0.00001):
             print("true")
         else:
