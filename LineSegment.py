@@ -15,7 +15,7 @@ class Point:
         '''
         self._x_coord=x_coord
         self._y_coord=y_coord
-        self._point_object=[self._x_coord, self._y_coord]
+        
 
     def get_x_coord(self):
        return self._x_coord
@@ -36,9 +36,9 @@ class Point:
         '''
         x2=point_object2.get_x_coord()
         y2=point_object2.get_y_coord()
-        x1=self._point_object[1]
-        y1=self._point_object[0]
-        distance=((y2-y1)**(2)-(x2-x1)**(2))**(0.5)
+        x1=self._x_coord
+        y1=self._y_coord
+        distance=((y2-y1)**(2)+(x2-x1)**(2))**(0.5)
         print(distance)
 
 
