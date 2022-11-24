@@ -79,7 +79,7 @@ class LineSegment:
         y1=self._endpoint_1.get_y_coord()
         x2=self._endpoint_2.get_x_coord()
         y2=self._endpoint_2.get_y_coord()
-        slope = float((y2 - y1) / (x2 - x1))
+        slope = (y2 - y1) / (x2 - x1)
         print(slope)
 
     def is_parallel_to(self,lseg1):
